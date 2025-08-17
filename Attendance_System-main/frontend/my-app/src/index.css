@@ -1,0 +1,113 @@
+/* Microsoft-themed animated heading for MLSC Attendance Form */
+.mlsc-microsoft-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 2.8rem;
+  font-family: 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  user-select: none;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.10), 0 1px 0 #fff;
+}
+.mlsc-m.ms { color: #f25022; animation: ms-pop 1.1s cubic-bezier(0.23, 1, 0.32, 1) 0.05s both; }
+.mlsc-l.ms { color: #7fba00; animation: ms-pop 1.1s cubic-bezier(0.23, 1, 0.32, 1) 0.18s both; }
+.mlsc-s.ms { color: #00a4ef; animation: ms-pop 1.1s cubic-bezier(0.23, 1, 0.32, 1) 0.31s both; }
+.mlsc-c.ms { color: #ffb900; animation: ms-pop 1.1s cubic-bezier(0.23, 1, 0.32, 1) 0.44s both; }
+.mlsc-form-text {
+  color: #222;
+  font-family: 'Segoe UI Semibold', 'Calibri', 'Arial', sans-serif;
+  font-weight: 600;
+  margin-left: 0.5em;
+  letter-spacing: 0.04em;
+  animation: ms-fadein 1.2s 0.6s both;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+@keyframes ms-pop {
+  0% { opacity: 0; transform: scale(0.5) rotateY(-90deg); }
+  60% { opacity: 1; transform: scale(1.15) rotateY(20deg); }
+  80% { transform: scale(0.95) rotateY(-10deg); }
+  100% { opacity: 1; transform: scale(1) rotateY(0deg); }
+}
+@keyframes ms-fadein {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background: radial-gradient(at 5.991379145918222% 10.541666348775228%, #ff4f1c 0px, transparent 30%), radial-gradient(at 78.4051722493665% 80.12499968210857%, #7fbc00 0px, transparent 50%), radial-gradient(at 88.31896535281477% 20.12499968210856%, #ffba01 0px, transparent 50%), radial-gradient(at 9.008620525228567% 88.4583330154419%, #01a6f0 0px, transparent 50%), #0f172a;
+  
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(74, 74, 74, 0.2);
+  z-index: -1;
+}
+
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
